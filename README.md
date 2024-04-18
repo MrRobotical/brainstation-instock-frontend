@@ -1,3 +1,44 @@
+
+### Frontend Functionality Summary:
+
+- **React Routing**: Utilization of `react-router-dom` for handling navigation within the application, including routes for listing, adding, editing, and deleting warehouses and inventory items.
+
+- **Component-Based Architecture**: Development using React components to build a modular and maintainable user interface. Key components include:
+  - `Header` and `Footer` for consistent layout across pages.
+  - `WarehouseList` and `InventoryListItems` for displaying lists of warehouses and their inventory items.
+  - `AddInventory` and `AddWarehouse` for forms to add new inventory items and warehouses.
+  - `EditWarehouse` and `EditInventoryItem` for editing existing warehouse and inventory details.
+  - `DeleteInventory` and `DeleteWarehouse` for handling the deletion of inventory items and warehouses.
+  - `ItemDetails` for detailed view of individual inventory items.
+
+- **State Management**: Use of React's `useState` for local state management within components to handle form inputs, validation, and UI state.
+
+- **API Integration**: Performing asynchronous operations with `axios` to interact with the backend for CRUD operations on warehouses and inventory items.
+
+- **Dynamic Form Handling**:
+  - Dynamic forms in `AddInventory` and `EditInventoryItem` that respond to user input and validation feedback.
+  - Conditional rendering based on inventory status to show different input fields (e.g., hiding the quantity input when the item is out of stock).
+
+- **Navigation and User Feedback**:
+  - Use of `useNavigate` from `react-router-dom` to programmatically navigate users after actions such as form submission.
+  - Implementing feedback mechanisms like alerts and error messages to enhance user interaction and error handling.
+
+- **Custom Form Field Component**:
+  - Reusable `FormField` component to standardize the form inputs across different forms, improving consistency and reducing code duplication.
+
+- **Styling**:
+  - Application of SCSS for styling, using separate style sheets for different components to keep styles modular and manageable.
+  - Responsive design considerations to ensure the application is usable on different devices.
+
+- **Validation and Error Handling**:
+  - Frontend validation to ensure all required fields are filled and formats are correct before submission.
+  - Error handling to display meaningful error messages based on the API response or validation results.
+
+- **Environmental Configuration**:
+  - Use of environment variables for managing API URLs and other configuration settings, enhancing security and flexibility in deployment.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
