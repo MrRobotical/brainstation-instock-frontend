@@ -1,3 +1,5 @@
+### Group project completed with teammates at Brainstation:
+
 
 ### Frontend Functionality Summary:
 
