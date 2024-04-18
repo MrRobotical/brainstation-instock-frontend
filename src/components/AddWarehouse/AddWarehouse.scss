@@ -1,0 +1,200 @@
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
+
+.add-warehouse {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  @include container;
+
+  &__arrow-title-container {
+    display: flex;
+    justify-content: start;
+    padding: 0 0 1rem 1.5rem;
+  }
+
+  &__back-arrow {
+    padding-top: 0.8rem;
+  }
+
+  &__page-title {
+    @include header;
+    color: $Pri-Instock-Black;
+    padding-left: 0.5rem;
+  }
+
+  &__form-details-title {
+    @include subheader;
+    border-top: 1px solid $Sec-Cloud;
+    color: $Pri-Instock-Black;
+    padding: 1.5rem 0 1rem 1.5rem;
+  }
+
+  &__form-contact-title {
+    @include subheader;
+    border-top: 1px solid $Sec-Cloud;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  &__label {
+    @include body-medium;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+  }
+
+  &__radio-buttons {
+    margin-right: 5rem;
+    & > span {
+      position: relative;
+      top: -0.2rem;
+    }
+
+    input[type='radio'] {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__radio-container {
+    margin-bottom: 1.5rem;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1.5rem 0 1.5rem;
+  }
+
+  &__input {
+    @include form-field;
+    border: 1px solid $Sec-Cloud;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 2px solid $Pri-Instock-Indigo;
+  }
+
+  &__error {
+    color: red;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input--error {
+    border: 2px solid red;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background: $Bg-Light-Grey;
+    height: 5.25rem;
+    padding: 1.5rem;
+  }
+
+  &__button {
+    @include body-small;
+    height: 3.27rem;
+    width: 50%;
+    align-items: center;
+    border-radius: 1.25rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__button-cancel {
+    border: 1px solid $Sec-Slate;
+    background: $Pri-White;
+    color: $Sec-Slate;
+
+    &:hover {
+      border: 2px solid $Pri-Instock-Indigo;
+      color: $Pri-Instock-Indigo;
+    }
+  }
+
+  &__button-add {
+    background: $Pri-Instock-Indigo;
+    border: none;
+    color: $Pri-White;
+
+    &:hover {
+      background-color: $Pri-Instock-Black;
+    }
+  }
+}
+
+@include tablet {
+  .add-warehouse {
+    &__tablet-desktop-container {
+      display: flex;
+      width: 100%;
+    }
+
+    &__tablet-desktop-container-left {
+      width: 50%;
+      position: relative;
+    }
+
+    &__tablet-desktop-container-left::after {
+      position: absolute;
+      content: '';
+      top: 1.5rem;
+      right: 0;
+      height: 36rem;
+      width: 1px;
+      background: $Sec-Cloud;
+    }
+
+    &__tablet-desktop-bottom-backgrdcolor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5.25rem;
+      background: $Bg-Light-Grey;
+    }
+
+    &__tablet-desktop-child-container-right {
+      width: 50%;
+    }
+
+    &__form-details-title {
+      padding-bottom: 1rem;
+    }
+
+    &__form-contact-title {
+      padding-bottom: 1rem;
+    }
+
+    &__button-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      padding: 2rem 1.5rem 2rem 0;
+    }
+
+    &__button-add {
+      width: 15rem;
+    }
+
+    &__button-cancel {
+      width: 8rem;
+    }
+  }
+}

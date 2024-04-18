@@ -1,0 +1,162 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.edit-inventory {
+    @include container;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $Sec-Cloud;
+    }
+
+    &__prev {
+        cursor: pointer;
+    }
+
+    &__heading {
+        color: $Pri-Instock-Black;
+        font-size: 2.75rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        color: $Pri-Instock-Black;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__form-wrapper {
+        padding: 2rem 1.5rem;
+
+        &--first {
+            border-bottom: 1px solid $Sec-Cloud;
+
+            @include tablet {
+                border-right: 1px solid $Sec-Cloud;
+                border-bottom: none;
+            }
+        }
+
+        @include tablet {
+            width: 50%;
+            padding: 0 3rem;
+            margin: 2rem 0;
+        }
+    }
+
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include tablet {
+            gap: 2.5rem;
+        }
+    }
+
+    &__form-heading {
+        @include subheader;
+        color: $Pri-Instock-Black;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__form-item {
+        display: flex;
+        flex-direction: column;
+
+        &--qty {
+            @include desktop {
+                width: 10rem;
+            }
+        }
+    }
+
+    &__form-label {
+        @include body-medium;
+        color: $Pri-Instock-Black;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        
+        @include tablet {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__form-input {
+        @include form-field;
+        border: 1px solid $Sec-Cloud;
+        background-color: transparent;
+        padding: 0.5rem 1rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--textarea {
+            height: 7.5rem;
+        }
+    }
+
+    &__form-radio-wrapper {
+        display: flex;
+        gap: 10rem;
+    }
+
+    &__from-radio-item {
+        display: flex;
+        margin-top: 0.5rem;
+    }
+
+    &__form-radio-label {
+        margin-left: 0.5rem;
+        @include body-small;
+
+        @include tablet {
+            @include body-medium;
+        }
+    }
+
+    &__form-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: rgba(247, 248, 249, 0.7);
+        padding: 1rem 1.5rem;
+
+        @include tablet {
+            justify-content: end;
+        }
+    }
+
+    &__form-button {
+        @include button-primary;
+        @include body-small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+
+        &--cancel {
+            @include button-secondary; 
+            border: 1px solid $Sec-Cloud;
+
+            &:hover {
+                background-color: #FFF;
+            }
+        }
+    }
+}

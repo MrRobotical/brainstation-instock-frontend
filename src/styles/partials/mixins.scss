@@ -1,0 +1,210 @@
+@use '../partials/variables.scss' as *;
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin header {
+  font-size: 2.54rem;
+  line-height: 3.27rem;
+  font-weight: 600;
+
+  @include tablet {
+    font-size: 2.9rem;
+    line-height: 3.64rem;
+  }
+}
+
+@mixin subheader {
+  font-size: 1.82rem;
+  line-height: 2.54rem;
+  font-weight: 600;
+
+  @include tablet {
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+  }
+}
+
+@mixin labels-links-buttons {
+  font-size: 1.18rem;
+  line-height: 1.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $Sec-Slate;
+
+  @include tablet {
+    font-size: 1.27rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin table-header {
+  font-size: 1rem;
+  line-height: 1.45rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $Sec-Slate;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 1.1rem;
+    line-height: 1.64rem;
+  }
+}
+
+@mixin body-large {
+  font-size: 1.36rem;
+  line-height: 2.36rem;
+
+  @include tablet {
+    font-size: 1.45rem;
+    line-height: 2.54rem;
+  }
+}
+
+@mixin body-medium {
+  font-size: 1.2rem;
+  line-height: 1.82rem;
+
+  @include tablet {
+    font-size: 1.27rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin body-small {
+  font-size: 1rem;
+  line-height: 1.45rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+    line-height: 1.64rem;
+  }
+}
+
+@mixin button {
+  height: 3.27rem;
+  width: 100%;
+  border-radius: 1.8rem;
+
+  @include tablet {
+    height: 3.45rem;
+    width: auto;
+    padding: 0 $Padding-Medium;
+  }
+}
+
+@mixin button-primary {
+  @include button;
+  background-color: $Pri-Instock-Indigo;
+  color: $Pri-White;
+  transition: ease-in-out 0.5;
+
+  &:hover {
+    background-color: $Pri-Instock-Black;
+  }
+}
+
+@mixin button-secondary {
+  @include button;
+  background-color: $Pri-White;
+  color: $Sec-Slate;
+  transition: ease-in-out 0.5;
+
+  &:hover {
+    color: $Pri-Instock-Indigo;
+    border-color: $Pri-Instock-Indigo;
+  }
+}
+
+@mixin button-delete {
+  @include button;
+  background-color: $Sup-Red;
+  color: $Pri-White;
+  transition: ease-in-out 0.5;
+
+  &:hover {
+    border-color: $Pri-Instock-Black;
+  }
+}
+
+@mixin text-link {
+  padding-right: 0.5rem;
+}
+
+@mixin nav-bar__link--inactive {
+  color: $Sec-Slate;
+  transition: ease-in-out 0.5;
+
+  &:hover {
+    text-decoration: underline;
+    color: $Pri-White;
+  }
+}
+
+@mixin nav-bar__link--active {
+  color: $Pri-White;
+}
+
+@mixin form-field {
+  @include button;
+  border-radius: 1.45rem;
+  padding-bottom: 0.5rem;
+  border: 2px solid $Sec-Cloud;
+  background-color: $Bg-Light-Grey;
+
+
+  &:active {
+    outline: 2px solid $Pri-Instock-Indigo;
+  }
+}
+
+@mixin tag-instock {
+  height: 2.2rem;
+  width: auto;
+  padding: 0 $Padding-Base;
+  background-color: rgba(21, 132, 99, 0.07);
+  color: $Sup-Green;
+  border-radius: 20px;
+
+  @include tablet {
+    height: 2.36rem;
+  }
+}
+
+@mixin tag-outofstock {
+  height: 2.2rem;
+  width: auto;
+  padding: 0 $Padding-Base;
+  background-color: rgb(201, 69, 21, 0.07);
+  border-radius: 20px;
+  color: $Sup-Red;
+
+  @include tablet {
+    height: 2.36rem;
+  }
+}
+
+@mixin container {
+  position: relative;
+  top: -6rem;
+  margin: 0 $Margin-Mobile;
+  box-shadow: 0 2px 5px 0 rgba(19, 24, 44, 0.1);
+  border-radius: 4px;
+  padding-top: 2rem;
+  background-color: #FFF;
+
+  @include tablet {
+    top: -7.72rem;
+    margin: 0 $Margin-Tablet;
+  }
+}

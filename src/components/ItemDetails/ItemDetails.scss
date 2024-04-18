@@ -1,0 +1,295 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+
+.item-details {
+
+
+    position: absolute;
+    top: 13rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__background {
+        border-radius: 4px;
+        box-shadow: rgba(19, 24, 44, 0.1) 0px 2px 5px 0px;
+        display: flex;
+        background-color: white;
+        height: 50vh;
+        width: 92vw;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        @include tablet {
+            height: 35vh;
+            width: 90vw;
+
+
+        }
+
+        @include desktop {
+            height: 30vh;
+            width: 80vw;
+
+        }
+
+    }
+
+    &__title-section {
+        display: flex;
+        height: 9vh;
+        align-items: center;
+
+        @include tablet {
+            height: 10.5vh;
+
+
+        }
+
+        @include desktop {}
+    }
+
+    &__title-area {
+        padding-top: 1rem;
+        display: flex;
+        height: 9vh;
+        border-bottom: 1px solid $Sec-Cloud;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        @include tablet {
+            height: 10.6vh;
+
+
+        }
+
+        @include desktop {
+            height: 10.6vh;
+
+
+        }
+    }
+
+    &__edit-icon-background {
+        border-radius: 50%;
+
+        background-color: #2E66E5;
+        height: 4rem;
+        width: 4rem;
+
+        @include tablet {
+            @include button-primary;
+
+        }
+
+        @include desktop {
+            @include button-primary;
+        }
+    }
+
+    &__actions-icons-image {
+        padding-top: 0.75rem;
+        padding-left: 01rem;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__actions-icons {
+        display: flex;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    &__edit-button {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            padding-top: 0.85rem;
+            font-size: 1.2rem;
+
+        }
+
+        @include desktop {
+            display: flex;
+            padding-top: 0.8rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__value {
+        @include body-medium;
+
+        &--out-of-stock {
+            @include tag-outofstock;
+            line-height: 2.2rem;
+            position: relative;
+            top: -6px;
+            margin-right: auto;
+
+            @include tablet {
+                position: static;
+            }
+        }
+
+        &--instock {
+            @include tag-instock;
+            line-height: 2.2rem;
+            position: relative;
+            top: -6px;
+            margin-right: auto;
+
+            @include tablet {
+                position: static;
+            }
+
+        }
+
+
+    }
+
+    &__main-title {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__bottom-section {
+        padding: 2rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @include desktop {
+
+            display: flex;
+
+        }
+    }
+
+    &__bottom-section-border {
+        padding: 2rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        @include desktop {
+
+            display: flex;
+
+        }
+    }
+
+    &__info-section {
+        padding-bottom: 1.5rem;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__info-section-status {
+        @include tablet {
+            display: flex;
+
+        }
+
+        @include desktop {}
+    }
+
+    &__title {
+        color: $Sec-Slate;
+        font-size: 1.25rem;
+
+        @include tablet {
+
+            font-size: 1rem;
+
+        }
+
+        @include desktop {
+            font-size: 1rem;
+
+
+        }
+    }
+
+    &__information {
+        font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 1rem;
+
+
+        }
+
+        @include desktop {
+            font-size: 1rem;
+
+
+        }
+    }
+
+    &__status-section {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 12rem;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__status-section-border {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__section-border {
+
+        @include tablet {
+            width: 30vw;
+            border-left: 1px solid $Sec-Cloud;
+            padding-left: 3rem;
+        }
+
+        @include desktop {
+            padding-left: 3rem;
+            width: 30vw;
+
+            border-left: 1px solid $Sec-Cloud;
+
+        }
+    }
+
+    &__section {
+        @include tablet {
+            width: 30vw;
+
+        }
+
+        @include desktop {
+
+            width: 30vw;
+
+        }
+    }
+}

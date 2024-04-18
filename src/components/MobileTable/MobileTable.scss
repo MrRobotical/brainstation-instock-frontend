@@ -1,0 +1,81 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+.main-mobile {
+  background-color: $Pri-White;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  border-radius: 2px;
+  width: 90%;
+  top: 0rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &__first-sec {
+    padding: 0.5rem 2rem 2rem 2rem;
+    border-bottom: 1px solid $Sec-Cloud;
+    &:first-child {
+      margin-top: -5rem;
+    }
+  }
+  &__info {
+    display: flex;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  &__cat-name {
+    padding-right: 10rem;
+  }
+  &__name-attribute {
+    display: flex;
+    align-items: center;
+  }
+  &__name-info {
+    margin-bottom: 2rem;
+  }
+  &__item-heading {
+    font-size: 1rem;
+    color: $Sec-Slate;
+    font-weight: 400;
+  }
+  &__name {
+    color: $Pri-Instock-Indigo;
+    font-weight: 600;
+  }
+  &__name-image {
+    height: 1.2rem;
+  }
+  &__category-name {
+    color: $Pri-Instock-Black;
+    font-weight: 600;
+  }
+  &__stat-QTY {
+  }
+  &__status {
+    margin-bottom: 2rem;
+  }
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__status-info {
+    &--in {
+      padding: 0 0.72rem;
+      background-color: rgba(21, 132, 99, 0.07);
+      color: #158463;
+      border-radius: 20px;
+      line-height: 2.2rem;
+      color: $Sup-Green;
+    }
+    &--out {
+      padding: 0 0.72rem;
+      background-color: rgba(201, 69, 21, 0.07);
+      border-radius: 20px;
+      color: #c94515;
+      line-height: 2.2rem;
+      color: $Sup-Red;
+    }
+  }
+}

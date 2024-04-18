@@ -1,0 +1,21 @@
+
+@use '../src/styles/partials/typography' as *;
+
+@use '../src/styles/partials/variables' as *;
+
+@use '../src/styles/partials/mixins' as *;
+
+html {
+  font-size: 11px;
+  font-family: "Titillium", Arial, sans-serif;
+  background-color: $Bg-Light-Grey;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium", Arial, sans-serif;
+}

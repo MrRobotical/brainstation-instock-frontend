@@ -1,0 +1,213 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+
+.inventory-list {
+  @include container;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 $Padding-Large;
+    padding-bottom: 1.5rem;
+    align-items: flex-start;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      padding: 0 2rem;
+      padding-bottom: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__search-bar {
+    @include body-small;
+    height: 36px;
+    border-radius: 20px;
+    border: 1px solid $Sec-Cloud;
+    padding-left: $Padding-Medium;
+    font-family: 'Titillium', Arial, sans-serif;
+    color: $Sec-Slate;
+    min-width: 18rem;
+
+    @include tablet {
+      height: 38px;
+    }
+
+    @include desktop {
+      min-width: 25rem;
+    }
+
+    &::placeholder {
+      @include body-small;
+      font-family: 'Titillium', Arial, sans-serif;
+      text-align: left;
+      color: $Sec-Slate;
+      background-image: url(../../assets/Icons/search-24px.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.36rem;
+      }
+    }
+  }
+
+  &__heading {
+    color: $Pri-Instock-Black;
+    font-size: 2.75rem;
+    text-align: left;
+  }
+
+  &__back-icon {
+    padding-right: $Padding-Base;
+  }
+
+  &__info {
+    padding: $Padding-Medium;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include tablet {
+      flex-flow: row nowrap;
+      padding: $Padding-Large;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__contact {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: $Margin-Tablet;
+
+    @include tablet {
+      margin-top: 0;
+      flex-grow: 1;
+    }
+  }
+
+  &__address {
+    width: 100%;
+
+    @include tablet {
+      width: 35%;
+      border-right: 1px solid $Sec-Cloud;
+      margin-right: $Padding-Large;
+    }
+
+    &-line--mobile {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-line--desktop {
+      display: none;
+
+      @include tablet {
+        display: contents;
+      }
+    }
+  }
+
+  &__contact-info,
+  &__contact-name {
+    flex-grow: 1;
+  }
+
+  &__subheading {
+    @include table-header;
+    padding-bottom: $Padding-Base;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  &__table-headings {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      background-color: $Bg-Light-Grey;
+      width: auto;
+    }
+  }
+
+  &__table-heading {
+    @include table-header;
+    padding: $Padding-Medium $Padding-Large;
+  }
+
+  &__add-button {
+    display: flex;
+    align-items: center;
+    @include button-primary;
+    border: 0;
+    font-family: 'Titillium';
+    min-width: 35px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      background-color: $Pri-Instock-Black;
+    }
+
+    &-icon {
+      height: auto;
+      fill: $Pri-White;
+
+      @include tablet {
+        padding-right: $Padding-Base;
+      }
+    }
+
+    &-text {
+      vertical-align: middle;
+      @include body-small;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.36rem;
+      }
+    }
+  }
+
+  &__sort-icon {
+    height: 1.8rem;
+  }
+
+}

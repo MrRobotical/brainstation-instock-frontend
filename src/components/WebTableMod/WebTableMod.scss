@@ -1,0 +1,105 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+.table {
+  position: relative;
+  border-radius: 2px;
+  width: 90%;
+  top: -8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-bottom: none;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin: auto;
+  padding-left: 2rem;
+
+  &__head {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  &__title {
+    white-space: nowrap;
+    padding: 1rem 3rem;
+    align-items: center;
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+  &__heading-icon {
+    width: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__heading {
+    @include tablet {
+      color: $Sec-Slate;
+      vertical-align: middle;
+      padding-right: 1rem;
+      display: inline-block;
+    }
+  }
+
+  &__body-title {
+    border-bottom: 1px solid $Sec-Cloud;
+    text-align: left;
+    &:hover {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+  }
+  &__info-name {
+    vertical-align: middle;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: $Pri-Instock-Indigo;
+    font-weight: 600;
+    display: inline-block;
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+  &__info-image {
+    width: 1.5rem;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &__info {
+    font-size: 1.2rem;
+    padding: 3rem;
+    color: $Pri-Instock-Black;
+    font-weight: 600;
+    @include tablet {
+      padding: 1rem;
+      &--instock {
+        color: $Sup-Red;
+        padding: 0 0.72rem;
+        background-color: rgba(201, 69, 21, 0.07);
+        border-radius: 20px;
+        color: #c94515;
+        line-height: 2.2rem;
+        
+      }
+      &--outstock {
+        padding: 0 0.72rem;
+        background-color: rgba(21, 132, 99, 0.07);
+        color: #158463;
+        border-radius: 20px;
+        line-height: 2.2rem;
+        color: $Sup-Green;
+      }
+    }
+  }
+  &__item {
+    vertical-align: middle;
+    padding-right: 1rem;
+    display: inline-block;
+  }
+  &__item-info {
+    vertical-align: middle;
+    width: 1rem;
+    display: inline-block;
+  }
+}

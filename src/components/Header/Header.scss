@@ -1,0 +1,105 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+@use '../../styles/partials/variables' as *;
+
+@use '../../styles/partials/typography.scss' as *;
+
+@use '../../App.scss' as *;
+
+.header {
+  background-color: $Bg-Graphite;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: ($Padding-Base * 2) 0 6.8rem 0;
+
+  @include tablet {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: ($Padding-Base * 2) ($Padding-Base * 2) 9.16rem ($Padding-Base * 2);
+  }
+
+  &__logo {
+    width: 40%;
+    margin: $Padding-Base * 2;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      max-height: 3.45rem;
+      width: auto;
+    }
+  }
+}
+
+.nav-bar {
+  height: 3.27rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: $Padding-Base;
+
+  @include tablet {
+    width: auto;
+    justify-content: flex-end;
+    margin: $Padding-Large;
+  }
+
+  &__link-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    align-items: center;
+    margin: 0 $Padding-Medium;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+}
+
+.nav-bar__link {
+  // @include button;
+  color: $Sec-Cloud;
+  text-align: center;
+  flex-grow: 1;
+  padding: $Padding-Base;
+  // padding: $Padding-Base;
+  border-radius: 1.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--active {
+    background-color: $Pri-Instock-Black;
+    color: $Pri-White;
+    border-radius: 20px;
+  }
+
+  @include tablet {
+    padding: $Padding-Base ($Padding-Base * 2);
+    margin: 0 0 0 $Padding-Base;
+    height: 3.45rem;
+    @include body-medium;
+  }
+
+  @include desktop {
+    @include body-large;
+  }
+
+  &--warehouses {
+    @include tablet {
+      @include body-medium;
+    }
+    @include desktop {
+      @include body-large;
+    }
+  }
+}

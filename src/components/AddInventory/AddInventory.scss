@@ -1,0 +1,50 @@
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
+
+.add-warehouse {
+  &__button-container-add-inventory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background: $Bg-Light-Grey;
+    height: 5.25rem;
+    padding: 1.5rem;
+  }
+}
+
+@include tablet {
+  .add-warehouse {
+    &__tablet-desktop-container-left-edit-inventory {
+      width: 50%;
+      position: relative;
+    }
+
+    &__tablet-desktop-container-left-edit-inventory::after {
+      position: absolute;
+      content: '';
+      top: 1.5rem;
+      right: 0;
+      height: 28rem;
+      width: 1px;
+      background: $Sec-Cloud;
+    }
+
+    &__button-container-add-inventory {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 11.5rem;
+      padding: 2rem 1.5rem 2rem 0;
+    }
+
+    &__button-add {
+      width: 15rem;
+    }
+
+    &__button-cancel {
+      width: 8rem;
+    }
+  }
+}

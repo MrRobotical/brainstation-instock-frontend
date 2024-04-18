@@ -1,0 +1,143 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.main {
+  width: 100%;
+
+&__first-sec { 
+  background-color: $Pri-White;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  border-radius: 2px;
+  width: 90%;
+  top: -5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  @include tablet {
+    position: relative;
+    border-radius: 2px;
+    width: 90%;
+    top: -8rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom: none;
+  }}
+
+  &__header {
+    display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      align-items: center;
+      border-bottom: 1px solid $Sec-Cloud;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid $Sec-Cloud;
+    }
+  }
+  &__main-name {
+    display: flex;
+    align-items: center;
+  }
+  &__header-image {
+    width: 3rem;
+    padding-right: 1rem;
+    fill: white;
+  }
+  &__header-title{
+    font-size: 1.8rem;
+    @include tablet{
+      font-size: 2rem;
+    }
+  }
+  &__header-button {
+    background-color: $Pri-Instock-Indigo;
+    border: none;
+    border-radius: 20px;
+    padding-left: 1rem;
+    width: 3.5rem;
+    height: 3rem;
+    @include tablet {
+      padding-left: 0rem;
+      width: 7rem;
+      height: 3rem;
+    }
+  }
+  &__button-image {
+    width: 2rem;
+    padding-right: 1rem;
+    color: white;
+    fill: white;
+  }
+  &__button-para {
+    display: none;
+    color: $Pri-White;
+    font-weight: 600;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+
+&__contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  border-bottom: 1px solid $Sec-Cloud;
+  @include tablet {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }}
+  &__address {
+    align-self: flex-start;
+    padding-bottom: 1rem;
+    @include tablet {
+      padding-bottom: 0rem;
+      padding-right: 3rem;
+    }
+    @include desktop {
+      padding-right: 40rem;
+    }
+  }
+  &__info-heading{
+    color:$Sec-Slate;
+    font-size: 1rem;
+    @include tablet{
+      font-size: 1.2rem
+
+    }
+    
+  }
+  &__info-details{
+    font-size: 1.2rem;
+    color: $Pri-Instock-Black;
+    font-weight: 600;
+    @include tablet{
+      font-size: 1.5rem;
+    }
+  }
+  &__info {
+    display: flex;
+    
+    @include tablet {
+      border-left: 1px solid $Sec-Cloud;
+      padding-left: 2rem;
+    }
+  }
+  &__person {
+    padding-right: 2rem;
+    @include tablet{
+      padding-right: 10rem;
+    }
+  }
+
+
+}

@@ -1,0 +1,155 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.warehouses {
+    @include container;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1.5rem;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            padding: 0 2.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__heading {
+        color: $Pri-Instock-Black;
+        font-size: 2.75rem;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__search-bar {
+        border: 1px solid $Sec-Cloud;
+        padding-left: $Padding-Medium;
+        font-family: 'Titillium', Arial, sans-serif;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        color: $Sec-Slate;
+        min-width: 18rem;
+
+        @include desktop {
+            width: 17rem;
+        }
+
+        @include desktop {
+            min-width: 25rem;
+        }
+    }
+
+    &__search-bar-input {
+        @include body-small;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include desktop {
+            font-size: 1.36rem;
+        }
+    }
+
+    &__search-bar-icon {
+        width: 1.5rem;
+
+        @include tablet {
+            width: 2rem;
+        }
+
+        @include desktop {
+            width: 2.5rem;
+        }
+    }
+
+    &__add-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include button-primary;
+        border: 0;
+        font-family: 'Titillium';
+        background-color: $Pri-Instock-Indigo;
+        color: $Pri-White;
+        border-radius: 20px;
+        padding: 0.5rem 1.25rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: ease-in-out 0.3s;
+        @include body-small;
+
+        &:hover {
+            background-color: $Pri-Instock-Black;
+        }
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include desktop {
+            font-size: 1.36rem;
+        }
+    }
+
+    &__list-headings-wrapper {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background-color: $Bg-Light-Grey;
+        }
+    }
+
+    &__list-heading {
+        display: flex;
+        align-items: center;
+        @include table-header;
+        color: $Sec-Slate;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include desktop {
+            font-size: 1.36rem;
+        }
+    }
+
+    &__list-heading-icon {
+        width: 1.25rem;
+    }
+}

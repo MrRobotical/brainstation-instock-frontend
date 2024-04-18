@@ -1,0 +1,80 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+
+.warehouse-details {
+  &__inventory-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  &__inventory-items {
+    padding: $Padding-Large $Padding-Large 0 $Padding-Large;
+    border-top: 1px solid $Sec-Cloud;
+  }
+
+  &__inventory-label,
+  &__inventory-heading {
+    width: 50%;
+    padding: $Padding-Base 0;
+
+    @include tablet {
+      width: auto;
+    }
+
+    &--item {
+      order: 1;
+    }
+
+    &--category {
+      order: 3;
+
+      @include tablet {
+        order: 2;
+      }
+    }
+
+    &--status {
+      order: 2;
+
+      @include tablet {
+        order: 3;
+      }
+    }
+
+    &--quantity {
+      order: 4;
+    }
+
+    &--actions {
+      order: 5;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: $Padding-Medium;
+    }
+  }
+
+  &__inventory-heading {
+    @include labels-links-buttons;
+    // padding: $Padding-Base;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // &__inventory-value {
+  //   // padding: $Padding-Base;
+  // }
+
+  &__inventory-row {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
